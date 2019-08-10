@@ -1,3 +1,4 @@
+.vscode
 *.ovpn
 *.pid
 run.ps1
