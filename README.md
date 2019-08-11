@@ -8,7 +8,7 @@
 Скрипты PowerShell
 
 * Test-VPN.ps1 - Создание, подключение, разъединение и удаление Windows VPN соединения по данным клиента;
-  `.\Test-Vpn.ps1 -NameVpnConnection "Adas Pack" -ServerAddress 213.135.90.163 -TunnelType Pptp -EncryptionLevel Optional -AuthenticationMethod MSChapv2 -Login "4bis" -Password "!346082Bh" -SplitTunneling -PassThru`
+  `.\Test-Vpn.ps1 -NameVpnConnection ""Test"" -ServerAddress 10.10.10.10 -TunnelType Pptp -EncryptionLevel Optional -AuthenticationMethod MSChapv2 L2tpPsk ""qwerty123"" -Login ""TestLogin"" -Password ""TestPwd"" -SplitTunneling -PassThru`
 * Test-OpenVPN.ps1 - Для OpenVPN. Для проверки используйте команду;
   `.\Test-Openvpn.ps1 -Config "C:\Program Files\OpenVPN\config\private.ovpn" -Ping 10.10.10.0 -TestCmdexe -TestService -TestGui`
 
