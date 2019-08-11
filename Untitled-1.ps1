@@ -9,13 +9,13 @@
 #} 
 #"Total number of birds is $count."
 
-$temp = ""
-$collection = "Add-VpnConnection", "-Name ""AdasPack_Test"" -ServerAddress 213.135.90.163"
-foreach ($Param in $collection)
-{
-    $temp = $temp + $Param
-}
-& $temp
+#$temp = ""
+#$collection = "Add-VpnConnection", "-Name ""AdasPack_Test"" -ServerAddress 213.135.90.163"
+#foreach ($Param in $collection)
+#{
+#    $temp = $temp + $Param
+#}
+#& $temp
 
 #Команда = Новый Команда;
 #Команда.УстановитьКоманду("oscript");
@@ -23,6 +23,19 @@ foreach ($Param in $collection)
 #// или сразу Команда.УстановитьСтрокуЗапуска("oscript -version");
 #КодВозврата = Команда.Исполнить();
 
-$prm = 'a', '-tzip', 'c:\temp\with space\test1.zip', 'C:\TEMP\with space\changelog'
 
-& 7z.exe $prm
+$command = {Add-VpnConnection -Name "AdasPack_Test" -ServerAddress 213.135.90.163 -TunnelType Pptp -EncryptionLevel Optional -AuthenticationMethod MSChapv2 -SplitTunneling -PassThru}
+invoke-command -scriptblock $command
+
+#$command = { get-eventlog -log "windows powershell" | where {$_.message -like "*certificate*"} }
+#invoke-command -scriptblock $command
+
+#param($p1, $p2, $p3, $p4)
+#$Script:args=""
+#write-host "Num Args: " $PSBoundParameters.Keys.Count
+#foreach ($key in $PSBoundParameters.keys) {
+#    $Script:args+= "`$$key=" + $PSBoundParameters["$key"] + "  "
+#}
+#write-host $Script:args
+
+

@@ -64,8 +64,23 @@ if($res -eq 1){Remove-Connection ($NameVpnConnection)}
 #}
 #& $temp !!! Как выполнить пока не знаю...
 #
+# или
+#
+#Пример 5
+#C:\PS>$command = { get-eventlog -log "windows powershell" | where {$_.message -like "*certificate*"} }
+#C:\PS> invoke-command -computername S1, S2 -scriptblock $command
+#
+#Описание-----------
+#В этом примере показано, как вводить команду, сохраненную в локальной переменной. 
+#Если вся команда сохранена в локальной переменной, можно указать переменную в качестве значения параметра ScriptBlock. Для отправки значения локальной переменной не требуется использовать ключевое слово "param" или переменную ArgumentList.
+#Первая команда сохраняет команду Get-Eventlog в переменной $command. Формат команды соответствует формату блока скрипта.
+#Вторая команда использует командлет Invoke-Command для выполнения команды, содержащейся в переменной $command, на удаленных компьютерах S1 и S2.
 
-Add-VpnConnection -Name $NameVpnConnection -ServerAddress $ServerAddress -TunnelType $TunnelType -EncryptionLevel $EncryptionLevel -AuthenticationMethod $AuthenticationMethod -L2tpPsk $L2tpPsk -SplitTunneling -PassThru
+#####if($L2tpPsk -ne $null){-L2tpPsk $L2tpPsk}
+$CommandAdd = {Add-VpnConnection -Name $NameVpnConnection -ServerAddress $ServerAddress -TunnelType $TunnelType -EncryptionLevel $EncryptionLevel -AuthenticationMethod $AuthenticationMethod -SplitTunneling -PassThru}
+invoke-command -scriptblock $CommandAdd
+
+#Add-VpnConnection -Name $NameVpnConnection -ServerAddress $ServerAddress -TunnelType $TunnelType -EncryptionLevel $EncryptionLevel -AuthenticationMethod $AuthenticationMethod -L2tpPsk $L2tpPsk -SplitTunneling -PassThru
 
 $vpn = Get-VpnConnection -Name $NameVpnConnection;
 if($vpn.ConnectionStatus -eq "Disconnected"){rasdial $NameVpnConnection $Login $Password}
