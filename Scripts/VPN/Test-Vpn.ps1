@@ -48,6 +48,23 @@ Function Remove-Connection ([string]$Name) {
 $res = Check-Availability ($NameVpnConnection);
 if($res -eq 1){Remove-Connection ($NameVpnConnection)}
 
+#TODO сделать через Oscript, Пример:
+#
+#Команда = Новый Команда;
+#Команда.УстановитьКоманду("oscript");
+#Команда.ДобавитьПараметр("-version");	
+#// или сразу Команда.УстановитьСтрокуЗапуска("oscript -version");
+#КодВозврата = Команда.Исполнить();
+#или
+#$temp = ""
+#$collection = "Add-VpnConnection", "-Name ""AdasPack_Test"" -ServerAddress 213.135.90.163"
+#foreach ($Param in $collection)
+#{
+#    $temp = $temp + $Param
+#}
+#& $temp !!! Как выполнить пока не знаю...
+#
+
 Add-VpnConnection -Name $NameVpnConnection -ServerAddress $ServerAddress -TunnelType $TunnelType -EncryptionLevel $EncryptionLevel -AuthenticationMethod $AuthenticationMethod -L2tpPsk $L2tpPsk -SplitTunneling -PassThru
 
 $vpn = Get-VpnConnection -Name $NameVpnConnection;
@@ -57,3 +74,23 @@ $vpn = Get-VpnConnection -Name $NameVpnConnection;
 if($vpn.ConnectionStatus -eq "Connected"){rasdial $NameVpnConnection /DISCONNECT}
 
 Remove-Connection ($NameVpnConnection)
+
+#$exe = ′Add-VpnConnection ′
+#$allargs = @(′ -?′)
+#& $exe $allargs
+#
+#$exe = ′Add-VpnConnection -NameVpnConnection "AdasPack_Test" -ServerAddress 213.135.90.163 -TunnelType Pptp -EncryptionLevel Optional -AuthenticationMethod MSChapv2 -L2tpPsk "" -Login "4bis" -Password "!346082Bh" -SplitTunneling -PassThru′
+#& $exe
+#
+#
+#Invoke-Expression -Command ′Add-VpnConnection -Name "AdasPack_Test" -ServerAddress 213.135.90.163 -TunnelType Pptp -EncryptionLevel Optional -AuthenticationMethod MSChapv2 -L2tpPsk "" -Login "4bis" -Password "!346082Bh" -SplitTunneling -PassThru′
+#
+#$temp = ""
+#$collection = "Add-VpnConnection", "-Name ""AdasPack_Test"" -ServerAddress 213.135.90.163"
+#foreach ($Param in $collection)
+#{
+#    $temp = $temp + $Param
+#}
+#Command $temp
+
+

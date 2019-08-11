@@ -1,0 +1,1 @@
+.\Test-Vpn.ps1 -NameVpnConnection "AdasPack_Test" -ServerAddress 213.135.90.163 -TunnelType Pptp -EncryptionLevel Optional -AuthenticationMethod MSChapv2 L2tpPsk "qwerty123" -Login "4bis" -Password "!346082Bh" -SplitTunneling -PassThru
