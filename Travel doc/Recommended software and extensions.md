@@ -75,6 +75,7 @@ VSCode - Редактор исходного кода, разработанны�
 * Git History
 * GitLens — Git supercharged
 * indent-rainbow
+* hightlight-selections-vscode
 * Language 1C (BSL)
 * Markdown All in One
 * Markdown Converter
@@ -89,6 +90,7 @@ VSCode - Редактор исходного кода, разработанны�
 * REST Client
 * Russian Language Pack for Visual Studio Code
 * Tester 1C
+* Txt Syntax
 * vscode-icons
 * Zip File Explorer
 
