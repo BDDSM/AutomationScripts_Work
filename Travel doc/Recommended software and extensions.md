@@ -37,18 +37,18 @@ if (-not $IsAdmin)
 или
 `iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`
 
-### Команды для установки программ через choco etc
+### Команды для установки программ через choco
 
 `choco install chocolateygui`   - установка графического интерфейса chocolateygui, доступен из пуск.
-`choco install 7zip.install`    - полный инсталятор 7zip или `choco install 7zip` содержащий только скрипт начала загрузки.
+`choco install 7zip.install`    - полный установочный файл 7zip или `choco install 7zip` содержащий только скрипт начала загрузки.
 `choco install vscode`          - полный дистрибутив VSCode.
-`choco install sourcetree`      - Git клиент от компании atlassian с графическим интерфейсом.
+`choco install sourcetree`      - Git клиент от компании Atlassian с графическим интерфейсом.
 `choco upgrade chocolatey`      - обновление пакет chocolatey.
 
 `cup all`                       - обновление всех установленных пакетов приложений.
 `choco uninstall chocolateygui` - удаление пакета chocolateygui.
 a
-`choco install git.install`     - полный инсталятор git или `choco install git` содержащий только скрипт начала загрузки. Для некоторых пакетов доступен список параметров установки. Разберем их на примере git:
+`choco install git.install`     - полный установочный файл git или `choco install git` содержащий только скрипт начала загрузки. Для некоторых пакетов доступен список параметров установки. Разберем их на примере git:
 
 * `/GitOnlyOnPath`            - Помещает `gitinstall\cmd` по указанному пути. Это также делается по умолчанию, если параметры пакета не установлены.
 * `/GitAndUnixToolsOnPath`    - Помещает `gitinstall\bin` по указанному пути. Этот параметр переопределит `/GitOnlyOnPath`.
@@ -93,6 +93,8 @@ VSCode - Редактор исходного кода, разработанны�
 
 Список имен рекомендуемых расширений:
 
+* AutoFileName
+* Bookmarks
 * Bracket Pair Colorizer
 * Chocolatey
 * Docker
@@ -109,14 +111,16 @@ VSCode - Редактор исходного кода, разработанны�
 * Markdown Converter
 * Markdown Navigation
 * Markdown PDF
-* Markdown Preview Enhanced with litvis
-* Markdown Preview Github Styling
+* Markdown Preview Enhanced
+* Markdown Preview GitHub Styling
 * Markdown Shortcuts
 * markdownlint
+* Markdown Extension Pack
 * OneScript Debug
 * Partial Diff
 * REST Client
 * Russian Language Pack for Visual Studio Code
+* Spell Right
 * Tester 1C
 * Txt Syntax
 * vscode-icons
