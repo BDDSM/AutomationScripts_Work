@@ -46,7 +46,7 @@ Function Check-Availability ([string]$Name) {
 }
 
 Function Remove-Connection ([string]$Name) {
-    Remove-VpnConnection -Name $Name -Force -PassThru
+    Remove-VpnConnection -Name $Name -Force
 }
 
 Function Test-Cmdexe {
@@ -70,12 +70,42 @@ Function Check-Connectivity ([string]$test_type, [array]$ping) {
     }
 }
 
+Function do_test([string]$tests) {
+    $cmdline = "${tests}";
+    Invoke-Expression "& $cmdline";
+}
+
 $res = Check-Availability ($NameVpnConnection);
 if($res -eq 1){Remove-Connection ($NameVpnConnection)}
 
-# TODO if($L2tpPsk -ne $null){-L2tpPsk $L2tpPsk}
-$CommandAdd = {Add-VpnConnection -Name $NameVpnConnection -ServerAddress $ServerAddress -TunnelType $TunnelType -EncryptionLevel $EncryptionLevel -AuthenticationMethod $AuthenticationMethod -SplitTunneling -PassThru}
-invoke-command -scriptblock $CommandAdd
+$AddVpnConnection = New-Object System.Collections.ArrayList
+$AddVpnConnection.Add("Add-VpnConnection")
+If ($PSBoundParameters.ContainsKey('NameVpnConnection')) {
+    $AddVpnConnection.Add("-Name " +   $PSBoundParameters.NameVpnConnection)
+}
+If ($PSBoundParameters.ContainsKey('ServerAddress')) {
+    $AddVpnConnection.Add("-ServerAddress " + $PSBoundParameters.ServerAddress)
+}
+If ($PSBoundParameters.ContainsKey('TunnelType')) {
+    $AddVpnConnection.Add("-TunnelType " + $PSBoundParameters.TunnelType)
+}
+If ($PSBoundParameters.ContainsKey('EncryptionLevel')) {
+    $AddVpnConnection.Add("-EncryptionLevel " + $PSBoundParameters.EncryptionLevel)
+}
+If ($PSBoundParameters.ContainsKey('AuthenticationMethod')) {
+    $AddVpnConnection.Add("-AuthenticationMethod " + $PSBoundParameters.AuthenticationMethod)
+}
+If ($PSBoundParameters.ContainsKey('L2tpPsk')) {
+    $AddVpnConnection.Add("-L2tpPsk " + $PSBoundParameters.L2tpPsk)
+}
+If ($PSBoundParameters.ContainsKey('SplitTunneling')) {
+    $AddVpnConnection.Add("-SplitTunneling")
+}
+If ($PSBoundParameters.ContainsKey('PassThru')) {
+    $AddVpnConnection.Add("-PassThru")
+}
+
+do_test "$AddVpnConnection"
 
 $vpn = Get-VpnConnection -Name $NameVpnConnection;
 if($vpn.ConnectionStatus -eq "Disconnected"){rasdial $NameVpnConnection $Login $Password}
