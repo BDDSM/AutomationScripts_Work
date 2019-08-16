@@ -121,6 +121,7 @@ VSCode - Редактор исходного кода, разработанны�
 * REST Client
 * Russian Language Pack for Visual Studio Code
 * Spell Right
+* Settings Sync
 * Tester 1C
 * Txt Syntax
 * vscode-icons
