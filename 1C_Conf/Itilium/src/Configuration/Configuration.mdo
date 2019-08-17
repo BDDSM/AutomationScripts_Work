@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6ab910dd-4e7c-4404-a30b-d8d5628811af">
+  <name>Итилиум</name>
+  <synonym>
+    <key>ru</key>
+    <value>Итилиум, редакция 4.2</value>
+  </synonym>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="c2611c92-2ed3-4538-9038-99d217a6add9"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="3ed548f6-c976-4ec4-a6cc-3443bc5f8aa3"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="b000825e-176e-4af1-b148-93b43a578946"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="e43be2d4-ad58-4d10-9d57-ed672f9d56d6"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="3c24bf31-7824-4507-aff0-e0dde0481b7e"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="6679ed62-44a6-4766-b193-2b47a0911479"/>
+  <configurationExtensionCompatibilityMode>8.3.14</configurationExtensionCompatibilityMode>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <vendor>ООО &quot;Деснол Софт Проджект&quot;</vendor>
+  <version>4.2.0.10</version>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <useManagedFormInOrdinaryApplication>true</useManagedFormInOrdinaryApplication>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <logo>
+    <transparentPixel>
+      <x>47</x>
+      <y>8</y>
+    </transparentPixel>
+  </logo>
+  <splash>
+    <transparentPixel>
+      <x>201</x>
+      <y>9</y>
+    </transparentPixel>
+  </splash>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <interfaceCompatibilityMode>Version8_2</interfaceCompatibilityMode>
+  <compatibilityMode>8.3.14</compatibilityMode>
+  <languages uuid="5b3b6cf0-e3ef-411d-a4b6-7155706b6cff">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.ФБ_Фобизнес</subsystems>
+  <catalogs>Catalog.Клиенты</catalogs>
+  <enums>Enum.ВидКонтактнойИнформации</enums>
+</mdclass:Configuration>
