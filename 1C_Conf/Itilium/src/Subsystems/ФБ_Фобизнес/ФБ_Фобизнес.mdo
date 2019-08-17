@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="aaa156d4-246b-4607-bebc-48045c20966d">
+  <name>ФБ_Фобизнес</name>
+  <synonym>
+    <key>ru</key>
+    <value>Фобизнес</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>0</picture>
+  </picture>
+  <content>Catalog.Клиенты</content>
+</mdclass:Subsystem>
