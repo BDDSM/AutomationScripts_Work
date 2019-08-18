@@ -50,6 +50,10 @@
     <languageCode>ru</languageCode>
   </languages>
   <subsystems>Subsystem.ФБ_Фобизнес</subsystems>
+  <subsystems>Subsystem.УправлениеДоступомККлиентам</subsystems>
   <catalogs>Catalog.Клиенты</catalogs>
+  <catalogs>Catalog.ПрофильПроцесса</catalogs>
+  <catalogs>Catalog.УчетнаяЗаписьПроцесса</catalogs>
   <enums>Enum.ВидКонтактнойИнформации</enums>
+  <enums>Enum.ТипПроцесса</enums>
 </mdclass:Configuration>

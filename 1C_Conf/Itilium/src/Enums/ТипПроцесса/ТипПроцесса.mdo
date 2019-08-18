@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e6990100-e99b-489c-9872-7e4a2c9ecd2c">
+  <producedTypes>
+    <refType typeId="7512739b-472a-4615-aad2-1447d2f859de" valueTypeId="2f515e15-a1f4-48b6-8935-0a510aed6308"/>
+    <listType typeId="d730a011-7460-4f65-a3ab-84f15b23426d" valueTypeId="7657439b-815b-46d2-b786-3d39b8d45ef9"/>
+    <managerType typeId="d64cc3e8-6d44-4dd0-90f2-dfd67f6b74e1" valueTypeId="55ab4f61-dc03-41a9-9c95-91edf0f61764"/>
+  </producedTypes>
+  <name>ТипПроцесса</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тип процесса</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="046a4f60-3dc8-46ec-9786-5ec6f22707f1">
+    <name>VPN</name>
+    <synonym>
+      <key>ru</key>
+      <value>VPN</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="49598f27-9989-4ac1-b421-ad4b60a34998">
+    <name>OpenVPN</name>
+    <synonym>
+      <key>ru</key>
+      <value>Open VPN</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="76d07ba6-ec3b-4add-8619-089ab86395c9">
+    <name>CiscoVPN</name>
+    <synonym>
+      <key>ru</key>
+      <value>Cisco VPN</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

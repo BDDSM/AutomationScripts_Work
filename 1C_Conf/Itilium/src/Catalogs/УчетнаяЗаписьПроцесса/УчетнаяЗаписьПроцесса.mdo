@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8ec61cdd-c333-40f8-b89a-f711c70e9e57">
+  <producedTypes>
+    <objectType typeId="2111dbfa-b29b-4834-98e3-790182300069" valueTypeId="143d7f06-23bd-4197-bc85-444583a579b7"/>
+    <refType typeId="3ba9a068-7e1b-4b2f-900e-aab0b6cdf5ed" valueTypeId="b632611e-cd42-4544-8489-78e646766de4"/>
+    <selectionType typeId="bf34103f-0471-4122-af97-14e3dd33260b" valueTypeId="08e1cc71-f436-4a6e-8afc-3be39db0c5be"/>
+    <listType typeId="4124c566-f694-4bca-bdec-ef55e80dd581" valueTypeId="3b053ac1-0514-4f68-930d-b14e4ef99802"/>
+    <managerType typeId="6abedd82-1fd9-405c-a2d4-501fd200ac1d" valueTypeId="109ef448-1ebe-4647-a995-65626c01562d"/>
+  </producedTypes>
+  <name>УчетнаяЗаписьПроцесса</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учетная запись процесса</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.УчетнаяЗаписьПроцесса.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.УчетнаяЗаписьПроцесса.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>
