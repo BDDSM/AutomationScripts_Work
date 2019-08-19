@@ -196,21 +196,6 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="0b44fd0e-40f3-458a-a982-6b7526f52fbe">
-      <name>Значение</name>
-      <synonym>
-        <key>ru</key>
-        <value>Значение</value>
-      </synonym>
-      <type>
-        <types>String</types>
-        <stringQualifiers/>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
     <attributes uuid="6c8d3d12-647e-48af-8d8e-287c527384ff">
       <name>Комментарий</name>
       <synonym>
@@ -220,23 +205,6 @@
       <type>
         <types>String</types>
         <stringQualifiers/>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
-    <attributes uuid="485f2ee4-1ec2-461c-8e90-3b96ccbbec2b">
-      <name>Контакт</name>
-      <synonym>
-        <key>ru</key>
-        <value>Контакт</value>
-      </synonym>
-      <type>
-        <types>String</types>
-        <stringQualifiers>
-          <length>100</length>
-        </stringQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -277,20 +245,6 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="79929290-8ff9-4953-baec-495950bcba4c">
-      <name>ПарольЗашифрован</name>
-      <synonym>
-        <key>ru</key>
-        <value>Пароль зашифрован</value>
-      </synonym>
-      <type>
-        <types>Boolean</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <dataHistory>Use</dataHistory>
-      <fullTextSearch>Use</fullTextSearch>
-    </attributes>
     <attributes uuid="da89a03c-185b-460c-b5d4-f1adc584426c">
       <name>Путь</name>
       <synonym>
@@ -305,6 +259,41 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="4bf155d3-9105-4953-b87e-56478c4a8e11">
+    <producedTypes>
+      <objectType typeId="3fa131af-a308-44e8-8c58-f21c06ce5bc8" valueTypeId="1c4ee339-355b-4b37-804a-765b71877bbb"/>
+      <rowType typeId="ef937e2c-4451-43a7-9ba2-727f55192574" valueTypeId="0c4031e1-702c-43a4-8184-925fb68fbfe5"/>
+    </producedTypes>
+    <name>ПараметрыПодключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры подключения</value>
+    </synonym>
+    <attributes uuid="0e3d0b27-1bac-4145-81cb-b2f7bf8c7933">
+      <name>Профиль</name>
+      <synonym>
+        <key>ru</key>
+        <value>Профиль</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПрофильПроцесса</types>
+      </type>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a4fcdb4f-0fbf-4eaf-96c5-a80803a247c8">
+      <name>УчетнаяЗапись</name>
+      <synonym>
+        <key>ru</key>
+        <value>Учетная запись</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.УчетнаяЗаписьПроцесса</types>
+      </type>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>

@@ -7,7 +7,7 @@ Param (
     [string]$AuthenticationMethod,
     [string]$L2tpPsk,
     [string]$Login,
-    [string]$Password,
+    [SecureString]$Password,
     [switch]$SplitTunneling,
     [switch]$PassThru,
     [array]$Ping,
@@ -36,7 +36,7 @@ Function Show-Usage {
     Write-Host "Example: .\Test-Vpn.ps1 -NameVpnConnection ""Test"" -ServerAddress 10.10.10.10 -TunnelType Pptp -EncryptionLevel Optional -AuthenticationMethod MSChapv2 L2tpPsk ""qwerty123"" -Login ""TestLogin"" -Password ""TestPwd"" -SplitTunneling -PassThru"
 }
 
-Function Check-Availability ([string]$Name) {
+Function Find-Connection ([string]$Name) {
     $FindVpnConnection = Get-VpnConnection | WHERE {$_.Name -eq $Name} | SELECT Name
     if ($FindVpnConnection) {
         return 1
@@ -50,10 +50,10 @@ Function Remove-Connection ([string]$Name) {
 }
 
 Function Test-Cmdexe {
-    Check-Connectivity "cmdexe" $ping
+    Ping-Connect "cmdexe" $ping
 }
 
-Function Check-Connectivity ([string]$test_type, [array]$ping) {
+Function Ping-Connect ([string]$test_type, [array]$ping) {
 
     Start-Sleep -Seconds 3
 
@@ -75,7 +75,7 @@ Function do_test([string]$tests) {
     Invoke-Expression "& $cmdline";
 }
 
-$res = Check-Availability ($NameVpnConnection);
+$res = Find-Connection ($NameVpnConnection);
 if($res -eq 1){Remove-Connection ($NameVpnConnection)}
 
 $AddVpnConnection = New-Object System.Collections.ArrayList

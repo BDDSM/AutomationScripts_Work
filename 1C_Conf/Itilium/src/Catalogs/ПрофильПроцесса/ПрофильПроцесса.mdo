@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a8a7303-79f2-4f83-9f24-d0f7701cdcee">
+  <producedTypes>
+    <objectType typeId="18765c14-5006-438d-9593-27aa4973b0b7" valueTypeId="5681aade-e61e-4bb2-95e1-37e0973e69fd"/>
+    <refType typeId="1f205977-a48d-417a-9268-8ab9a246ae22" valueTypeId="de9ce64d-250d-4882-b6f6-2f4895a1bd3a"/>
+    <selectionType typeId="5220807f-53bf-47b4-a4f3-b52946fbe330" valueTypeId="af5b5c8a-cb14-49f0-aea8-c6b4017c6f96"/>
+    <listType typeId="d77b4a9b-99c4-449b-afaa-1149193acca2" valueTypeId="d499bcbb-3a9e-493e-87a5-436ed13a17f6"/>
+    <managerType typeId="baa593d6-02c0-4af6-8ced-b0d8c6e39307" valueTypeId="c43a252f-5317-4910-b992-514b91be6a08"/>
+  </producedTypes>
+  <name>ПрофильПроцесса</name>
+  <synonym>
+    <key>ru</key>
+    <value>Профиль процесса</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ПрофильПроцесса.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ПрофильПроцесса.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="d2900ddd-0109-479d-b98e-dc74de330d2a">
+    <name>Процесс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процесс</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипПроцесса</types>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>
