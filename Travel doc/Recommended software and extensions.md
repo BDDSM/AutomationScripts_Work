@@ -43,11 +43,12 @@ if (-not $IsAdmin)
 `choco install 7zip.install`    - полный установочный файл 7zip или `choco install 7zip` содержащий только скрипт начала загрузки.
 `choco install vscode`          - полный дистрибутив VSCode.
 `choco install sourcetree`      - Git клиент от компании Atlassian с графическим интерфейсом.
-`choco upgrade chocolatey`      - обновление пакет chocolatey.
 
+`choco upgrade chocolatey`      - обновление пакет chocolatey.
 `cup all`                       - обновление всех установленных пакетов приложений.
+
 `choco uninstall chocolateygui` - удаление пакета chocolateygui.
-a
+
 `choco install git.install`     - полный установочный файл git или `choco install git` содержащий только скрипт начала загрузки. Для некоторых пакетов доступен список параметров установки. Разберем их на примере git:
 
 * `/GitOnlyOnPath`            - Помещает `gitinstall\cmd` по указанному пути. Это также делается по умолчанию, если параметры пакета не установлены.
