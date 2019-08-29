@@ -1,0 +1,1 @@
+logman import -n "1C_std" -xml 1C_std.xml
